@@ -1,0 +1,112 @@
+[
+  {
+    "name": "NASS",
+    "dataset":[
+      {
+        "name": "reports",
+        "cols": [
+          {
+            "name": "survey_abb",
+            "type": "string",
+            "description": "col 1 data sets"
+          },
+          {
+            "name": "report_num",
+            "type": "string",
+            "description": "col 2 data sets"
+          },
+          {
+            "name": "report_header",
+            "type": "string",
+            "description": "col 2 data sets"
+          }
+        ]
+      },
+      {
+        "name": "series_elements",
+        "cols": [
+          {
+            "name": "series_abb",
+            "type": "string",
+            "description": "col 1 data sets"
+          },
+          {
+            "name": "series_element",
+            "type": "string",
+            "description": "col 2 data sets"
+          },
+          {
+            "name": "element_name",
+            "type": "string",
+            "description": "col 2 data sets"
+          },
+          {
+            "name": "invalid",
+            "type": "string",
+            "description": "col 2 data sets"
+          }
+        ]
+      },
+      {
+        "name": "series",
+        "cols": [
+          {
+            "name": "series_abb",
+            "type": "string",
+            "description": "col 1 data sets"
+          },
+          {
+            "name": "series_header",
+            "type": "string",
+            "description": "col 2 data sets"
+          },
+          {
+            "name": "series_seq",
+            "type": "string",
+            "description": "col 2 data sets"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "ARMS",
+    "dataset":[
+      {
+        "name": "Data 2",
+        "cols": [
+          {
+            "name": "col 1",
+            "type": "string",
+            "description": "col 1 data sets"
+          },
+          {
+            "name": "col 2",
+            "type": "string",
+            "description": "col fhdrh  data sets"
+          },
+          {
+            "name": "col 2",
+            "type": "string",
+            "description": "col fhdrh  data sets"
+          }
+        ]
+      },
+      {
+        "name": "Data 3",
+        "cols": [
+          {
+            "name": "col 1",
+            "type": "string",
+            "description": "col 1 data sets"
+          },
+          {
+            "name": "col 2",
+            "type": "string",
+            "description": "col 2 data sets"
+          }
+        ]
+      }
+    ]
+  }
+]

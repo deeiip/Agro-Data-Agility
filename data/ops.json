@@ -1,0 +1,26 @@
+[
+  {
+    "title":"Join",
+    "desc": "Join two dataset",
+    "icon":"glyphicon-random",
+    "handler":"showJoin"
+  },
+  {
+    "title":"Select",
+    "desc": "Select a set of columns from an existing dataset.",
+    "icon":"glyphicon-hand-up",
+    "handler":"showSelect"
+  },
+  {
+    "title":"Filter",
+    "desc": "Apply a filter to a column. You can apply all sql operator.",
+    "icon":"glyphicon-filter",
+    "handler":"showFilter"
+  },
+  {
+    "title":"Mask",
+    "desc": "Select Some Column",
+    "icon":"glyphicon-link",
+    "handler":"showMask"
+  }
+]
