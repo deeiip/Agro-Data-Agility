@@ -16,7 +16,7 @@ if(isset($_POST) && isset($_POST["query"]) && !empty(trim($_POST["query"])) && i
         $grant->execute();
         echo "success";
     } catch (PDOException $ex) {
-        $msg = $ex->getCode() . " - " . $ex->getMessage();
+        $msg = $ex->getMessage();
         echo $msg;
     }
 }

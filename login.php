@@ -18,6 +18,9 @@ if($usr == $userA)
         unset($_COOKIE["username"]);
         setcookie("username", null, time()-3600);
         setcookie("username", $userA);
+        unset($_COOKIE["password"]);
+        setcookie("passowrd", null, time()-3600);
+        setcookie("password", $passA);
         header("Location: index.php");
     }
 }
@@ -32,6 +35,9 @@ elseif($usr == $userB)
         unset($_COOKIE["username"]);
         setcookie("username", null, time()-3600);
         setcookie("username", $userB);
+        unset($_COOKIE["password"]);
+        setcookie("passowrd", null, time()-3600);
+        setcookie("password", $passB);
         header("Location: index.php");
     }
 }
@@ -46,6 +52,9 @@ elseif($usr == $userC)
         unset($_COOKIE["username"]);
         setcookie("username", null, time()-3600);
         setcookie("username", $userC);
+        unset($_COOKIE["password"]);
+        setcookie("passowrd", null, time()-3600);
+        setcookie("password", $passC);
         header("Location: index.php");
     }
 }

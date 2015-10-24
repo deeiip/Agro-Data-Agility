@@ -25,7 +25,7 @@
     width: 0;
     height: 100%;
     margin-left: -250px;
-    overflow-y: auto;
+
     background: #fff;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -85,11 +85,11 @@
 
 .sidebar-nav-right li{
     text-indent: 20px;
-    line-height: 40px;
+    line-height: 20px;
 }
 .sidebar-nav li {
     text-indent: 20px;
-    line-height: 40px;
+    line-height: 20px;
 }
 
 .sidebar-nav-right li a
@@ -127,15 +127,15 @@
 }
 
 .sidebar-nav-right > .sidebar-brand {
-    height: 65px;
+    height: 35px;
     font-size: 18px;
-    line-height: 60px;
+    line-height: 30px;
 }
 
 .sidebar-nav > .sidebar-brand {
-    height: 65px;
+    height: 35px;
     font-size: 18px;
-    line-height: 60px;
+    line-height: 30px;
 }
 
 .sidebar-nav-right > .sidebar-brand a {
@@ -147,12 +147,12 @@
 }
 
 .sidebar-nav-right > .sidebar-brand a:hover {
-    color: #dff0d8;
+    color: #585858;
     background: none;
 }
 
 .sidebar-nav > .sidebar-brand a:hover {
-    color: #dff0d8;
+    color: #585858;
     background: none;
 }
 
@@ -199,4 +199,9 @@
     background-color: #E6E6E6;
     box-shadow: 0 0 20px #ddd;
     border-radius: 5px;
+}
+.modal .modal-body {
+    max-height: 420px !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
 }

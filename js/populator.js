@@ -226,7 +226,7 @@ var showSelect = function(data){
         var chks = '';
         for(var i = 0; i< names.length; i++)
         {
-            chks+='<div class="col-lg-3">'+
+            chks+='<div class="col-lg-6">'+
             '<div class="checkbox select-box">'+
             '<label><input data-type="' + types[i] + '" data-desc="'+ descs[i]+'" data-col="'+ names[i]+'" type="checkbox">'+
             names[i] +'</label></div></div>';
@@ -246,8 +246,8 @@ $.get('data/ops.json', function(data){
         var target = $('#ops-panel');
         var name = data[i].title;
         var desc = data[i].desc;
-        var htmlStr = '<div data-op="'+ name +'" onclick="'+ data[i].handler +'(this)" style="text-align: center;" class="col-md-3 container showcase"><h5><a href="#">'+ name +'</a></h5>'+
-            '<p style="text-align: center;"><i style="text-align: center; font-size: 50px; color: #269abc;" class="glyphicon '
+        var htmlStr = '<div data-op="'+ name +'" onclick="'+ data[i].handler +'(this)" style="text-align: center;" class="col-md-4 container showcase"><h5><a style="color: #bc585b;" href="#">'+ name +'</a></h5>'+
+            '<p style="text-align: center;"><i style="text-align:  center; font-size: 50px; color: #bc585b;" class="glyphicon '
             + data[i].icon + '"></i><br>'+
             desc + '</p></div>';
         var newP = $(htmlStr).hide();
@@ -262,9 +262,11 @@ $.get('data/ops.json', function(data){
 $.get('data/meta.json', function(data){
     for(var i = 0; i< data.length; i++)
     {
+        var cName = 'data-col-'+i;
+        var iName = 'expander-'+i;
         var target = data[i];
-        var htmlStr = '<li class="sidebar-brand"><a href="#">'+
-        target.name +'&nbsp; &nbsp; &nbsp; <span class="caret"></span></a></li>';
+        var htmlStr = '<li id="'+ iName +'" class="sidebar-brand"><a class="expander" href="#"> &nbsp;'+
+        target.name +'&nbsp; <span class="caret"></span></a></li>';
         for(var j =0 ; j< target.dataset.length ; j++)
         {
             var names = [];
@@ -277,9 +279,9 @@ $.get('data/meta.json', function(data){
                 types.push(current.type);
                 desc.push(current.description);
             }
-            htmlStr+='<li><a class="hard-data meta-data" data-fname="'+ target.dataset[j].name +'" data-names="'+ names.join(",") +
+            htmlStr+='<li><a class="hard-data meta-data '+ cName +'" data-fname="'+ target.dataset[j].name +'" data-names="'+ names.join(",") +
             '" data-types="'+ types.join(",") +
-            '" data-descs="' + desc.join(",") + '" href="#">'+ target.dataset[j].name +'</a></li>';
+            '" data-descs="' + desc.join(",") + '" href="#"><i style="color: #bc8a0f;" class="fa fa-table"></i> &nbsp; &nbsp;'+ target.dataset[j].name +'</a></li>';
         }
         var newP = $(htmlStr).hide();
         $('#data-sets').append(newP);
@@ -289,6 +291,7 @@ $.get('data/meta.json', function(data){
         var names = $(this).data('names').split(",");
         var types = $(this).data('types').split(",");
         var descs = $(this).data('descs').split(",");
+        var selfName= $(this).data('fname');
         var target = $('#meta-table');
         target.html('');
         var htmlStr = '<thead><tr><th>#</th><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>';
@@ -306,6 +309,12 @@ $.get('data/meta.json', function(data){
         target.append(newP);
         newP.show('normal');
         $('#data-dialog').show('normal');
+        $('#data-prev').attr('data-fname', selfName);
+        $('#data-prev').unbind('click');
+        $('#data-prev').click(function(){
+            var tabName = $('#data-prev').attr('data-fname');
+            getPreview(tabName);
+        });
 
     });
     $('#data-dialog-close').click(function(){
@@ -315,4 +324,30 @@ $.get('data/meta.json', function(data){
 
         $('#data-dialog').hide('normal');
     });
+    $('#expander-0').click(function(data){
+        $('.data-col-1').hide('normal');
+        $('.data-col-0').show('normal');
+
+    });
+
+    $('#expander-1').click(function(data){
+        $('.data-col-0').hide('normal');
+        $('.data-col-1').show('normal');
+
+    });
+    $('.data-col-1').hide('normal');
+
 });
+
+var getPreview = function(data)
+{
+    var actual = $('#data-prev').text();
+    $('#data-prev').html(actual+ '&nbsp; <i class="fa fa-spin fa-circle-o-notch"></i>');
+    $('#data-prev').prop("disabled", true);
+    $.get("query.php", {table_name: data}, function(data){
+        $('#data-container').html(data);
+        $('#data-prev').prop("disabled", false);
+        $('#data-prev').html(actual);
+        $('#data-dialog').hide('normal');
+    });
+};

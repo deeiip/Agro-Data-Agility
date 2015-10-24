@@ -5,26 +5,56 @@
 
 var createVeiw = function(qry, name, names, types, descs) {
     var success;
+    var orig = $('#save-data').text();
+    $('#save-data').html($('#save-data').text()+'<i class="fa fa-circle-o-notch fa-spin"></i>');
     $.post("create.php", {
         query: qry,
         view_name: name
     }, function(data)
     {
         console.log(data);
+        $('#save-data').html(orig);
+        $('#save-data').prop("disabled", false);
         var result = data;
         if(result == "success")
         {
             var htmlStr = '<li data-name="'+ 'set34' +'" data-query="'+ qry +'"><a class="meta-data hard-data"' +
                 'data-fname="'+name+'" data-names="'+ names +
-                '" data-types="'+ types +'" data-descs="'+ descs +'" href="#">'+ name+'</a></li>';
+                '" data-types="'+ types +'" data-descs="'+ descs +'" href="#"> <i style="color: #1cbc96;" class="fa fa-table"></i> &nbsp; &nbsp;'+ name+'</a></li>';
             $('#user-datasets').append($(htmlStr));
             $('#dialog').hide('normal');
+            $.notify({
+                // options
+                message: 'Dataset created successfully. Use the left panel to view details.'
+            },{
+                // settings
+                type: 'success',
+                placement: {
+                    from: "bottom",
+                    align: "right"
+                }
+            });
+        }
+        else
+        {
+            $.notify({
+                // options
+                message: 'Error creating dataset. <br>' + result
+            },{
+                // settings
+                type: 'danger',
+                placement: {
+                    from: "bottom",
+                    align: "right"
+                }
+            });
         }
         $('#resultset-name').val('');
         $('.meta-data').click(function(){
             var names = $(this).data('names').split(",");
             var types = $(this).data('types').split(",");
             var descs = $(this).data('descs').split(",");
+            var selfName= $(this).data('fname');
             var target = $('#meta-table');
             target.html('');
             var htmlStr = '<thead><tr><th>#</th><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>';
@@ -42,7 +72,12 @@ var createVeiw = function(qry, name, names, types, descs) {
             target.append(newP);
             newP.show('normal');
             $('#data-dialog').show('normal');
-
+            $('#data-prev').attr('data-fname', selfName );
+            $('#data-prev').unbind('click');
+            $('#data-prev').click(function(){
+                var tabName = $('#data-prev').attr('data-fname');
+                getPreview(tabName);
+            });
         });
     });
     return success;
@@ -78,6 +113,7 @@ var createSet = function(qry, names, types, descs){
     {
         used_name[fname] = 1;
         var result = createVeiw(qry, fname, names, types, descs);
+        $('#save-data').prop("disabled", true);
     }
 
 
@@ -117,6 +153,7 @@ $('#save-data').click(function(event){
         st = st.substring(0, st.length - 2);
         var qry = 'create view ' + fname +' as ' + st + ' from ' + $('#select-dataset-select').val() + '';
         createSet(qry, names, types, descs);
+
 
     }
     else if($(this).attr('data-ops') == 'join')

@@ -30,7 +30,7 @@ if(!isset($_COOKIE["username"]))
     <script src="js/jquery-ui.js"></script>
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -38,6 +38,21 @@ if(!isset($_COOKIE["username"]))
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+        }
+    </style>
 
 </head>
 
@@ -51,12 +66,12 @@ if(!isset($_COOKIE["username"]))
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">USDA</a>
+            <a class="navbar-brand" href="index.html"><i class="fa fa-database"></i> &nbsp; Agro Data Agility</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-            <ul class="nav navbar-nav">
-
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="logout.php"><i class="fa fa-sign-out"></i> &nbsp;Logout</a></li>
             </ul>
         </div>
     </div>
@@ -67,13 +82,12 @@ if(!isset($_COOKIE["username"]))
     <div id="sidebar-wrapper">
         <ul id="user-datasets" class="sidebar-nav">
             <li class="sidebar-brand">
-                <a href="#">
-                    Custom Datasets: &nbsp; &nbsp; &nbsp; <span class="caret"></span>
+                <a href="#" id="user-dataset-header">
+                    Custom Datasets: &nbsp; &nbsp; <i class="fa fa-paw fa-spin"></i>
                 </a>
+
             </li>
-            <li>
-                <a href="#">Subs</a>
-            </li>
+
 
         </ul>
     </div>
@@ -88,9 +102,29 @@ if(!isset($_COOKIE["username"]))
     <!-- Page Content -->
     <div id="page-content-wrapper">
         <div class="container-fluid">
-            <div  class="row">
+            <div class="row">
+
                 <div id="ops-panel" class="col-lg-12">
 
+                </div>
+
+
+                <!-- very fragile code -->
+                <div class="well col-lg-12" style="margin: 0 !important; background: #fff;">
+                    <h5> <i style="color: #1cbc96;" class="fa fa-table"></i> &nbsp; Preview Window</h5>
+
+                    <div id="data-container" style=" margin-top: 20px; height: 190px; overflow-y: scroll; box-shadow: inset 0 0 5px #dddddd; padding: 10px;">
+                        <span style="margin-left: 40%; line-height: 170px;">Select a table to preview!</span>
+                    </div>
+                    <br />
+                    <!--<div class="form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="query" placeholder="Your MySQL Query">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button" onclick="sendQuery();">Go &rightarrow;</button>
+                            </span>
+                        </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -110,71 +144,13 @@ if(!isset($_COOKIE["username"]))
                 </div>
             </div>
             <div id="manip-board" class="modal-body">
-                <!-- <p>
-                <div class="form-horizontal">
-                    <div class="form-group">
-                        <label for="select" class="col-lg-2 control-label">First Dataset</label>
-                        <div class="col-lg-4">
-                            <select class="form-control" id="select3">
-                                <option>Option 1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
 
-                        </div>
-                        <label for="select" class="col-lg-2 control-label">Second Dataset</label>
-                        <div class="col-lg-4">
-                            <select class="form-control" id="select4">
-                                <option>Option 1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-
-                        </div>
-
-                        <br>
-
-                    </div>
-                <div class="form-group">
-                    <label for="select" class="col-lg-2 control-label">First Dataset</label>
-                    <div class="col-lg-4">
-                        <select class="form-control" id="select">
-                            <option>Option 1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
-
-                    </div>
-                    <label for="select" class="col-lg-2 control-label">Second Dataset</label>
-                    <div class="col-lg-4">
-                        <select class="form-control" id="select2">
-                            <option>Option 1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
-
-                    </div>
-
-                    <br>
-
-                </div>
-                </div>
-                </p>
-            </div> -->
                 <p><form class="form-horizontal"><div class="form-group"></div><div class="form-group"><label for="check1"></label><div class="checkbox col-lg-3" id="check1"><label>
                                 <input type="checkbox"> Checkbox</label></div></div></form></p>
             </div>
             <div class="modal-footer">
                 <button id="data-discard" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button id="save-data" type="button" class="btn btn-primary">Save changes</button>
+                <button id="save-data" type="button" class="btn btn-primary">Save changes &nbsp; &nbsp;</button>
             </div>
         </div>
     </div>
@@ -193,6 +169,7 @@ if(!isset($_COOKIE["username"]))
             </div>
             <div class="modal-footer">
                 <button id="data-close" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button id="data-prev" type="button" class="btn btn-default">Preview</button>
             </div>
         </div>
     </div>
@@ -217,6 +194,7 @@ if(!isset($_COOKIE["username"]))
 <script src="js/generator.js"></script>
 <script src="js/beautify.js"></script>
 <script src="//startyour.club/Twitter/dist/bootstrap-notify.js"></script>
+<script src="js/preconf.js"></script>
 <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 </body>

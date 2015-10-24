@@ -12,7 +12,7 @@ var showArms = function(){
 
 
 $('#resultset-name').on('change', function(event){
-    $('#duplicate-name-err').attr('class', 'col-lg-4');
+    $('#duplicate-name-err').attr('class', 'col-lg-8');
     if($('#resultset-name').val().trim() in used_name)
     {
         $('#duplicate-name-err').addClass('has-error');
@@ -36,3 +36,5 @@ $('#resultset-name').on('change', function(event){
 
 
 });
+
+
