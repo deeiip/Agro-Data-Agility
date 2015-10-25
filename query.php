@@ -1,9 +1,10 @@
 <?php
+include_once "config.php";
 if(isset($_GET["table_name"]))
 {
-    $host = "mysql:host=gourab.c0exnouewd5v.us-west-2.rds.amazonaws.com;dbname=USDA;";
-    $username = "gourab";
-    $password = "acdh3546";
+    $host = $constring;
+    $username = $uname;
+    $password = $pword;
     try {
         $pdo = new PDO($host, $username, $password);
         $q = "SELECT * FROM " . $_GET["table_name"] . " limit 10";
