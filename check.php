@@ -1,9 +1,10 @@
 <?php
+include_once "config.php";
 if(isset($_GET["view_name"]) && !empty(trim($_GET["view_name"])) && isset($_COOKIE["username"]) && !empty(trim($_COOKIE["username"])))
 {
-    $username = "gourab";
-    $password = "acdh3546";
-    $host = "mysql:host=gourab.c0exnouewd5v.us-west-2.rds.amazonaws.com;dbname=USDA;";
+    $host = $constring;
+    $username = $uname;
+    $password = $pword;
     try {
         $pdo = new PDO($host, $username, $password);
         $view = $_GET["view_name"];

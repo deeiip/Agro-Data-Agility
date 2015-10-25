@@ -1,7 +1,8 @@
 <?php
-$username = "gourab";
-$password = "acdh3546";
-$host = "mysql:host=gourab.c0exnouewd5v.us-west-2.rds.amazonaws.com;dbname=USDA_Members;";
+include_once "config.php";
+$host = $constring;
+$username = $uname;
+$password = $pword;
 try {
     $pdo = new PDO($host, $username, $password);
     $username = $_POST["username"];
