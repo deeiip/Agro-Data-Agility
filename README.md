@@ -6,7 +6,7 @@ To use this app simply write real values in the ```config.php```. And you need a
 
 ## Bugs and Issues
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/deeiip/Agro-Data-Agility/issues) here on GitHub .
+Have a bug or an issue with this app? [Open a new issue](https://github.com/deeiip/Agro-Data-Agility/issues) here on GitHub .
 
 ## Creator
 
