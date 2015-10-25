@@ -1,4 +1,5 @@
 <?php
+require_once "config.php";
 class col{
     public $name;
     public $type;
@@ -9,7 +10,7 @@ class dataItem{
 }
 if(isset($_COOKIE["username"]) && isset($_COOKIE["password"]))
 {
-    $host = "mysql:host=gourab.c0exnouewd5v.us-west-2.rds.amazonaws.com;dbname=USDA;";
+    $host = $constring;
     $username = $_COOKIE["username"];
     $password = $_COOKIE["password"];
     try {
