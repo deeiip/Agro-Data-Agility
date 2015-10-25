@@ -40,7 +40,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="javascript:void(0);">Sign Up or Log In</a>
+            <a class="navbar-brand" href="index.html"><i class="fa fa-database"></i> &nbsp; Agro Data Agility</a>
         </div>
 
 
@@ -105,7 +105,7 @@ if(isset($_GET["msgType"]) && !empty(trim($_GET["msgType"])) && isset($_GET["msg
     first = true;
     $("input[name='inviUUID']").change(function() {
         var uuid = $("input[name='inviUUID']").val();
-        if(uuid.length == 16)
+        if(uuid.length == 9)
         {
             $("input[disabled]").removeAttr('disabled');
             if(first)

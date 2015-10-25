@@ -88,6 +88,7 @@ var showFilter = function(src){
     $('#dialog').show('normal');
     $('#save-data').attr('data-ops','filter');
     $('#resultset-name').attr('placeholder', 'dataset_' + name_markar);
+    $('#filter-dataset-select').change();
 
 };
 
@@ -178,7 +179,8 @@ var showJoin = function(src){
 
     });
     $('#save-data').attr('data-ops','join');
-
+    $('#data1-select').change();
+    $('#data2-select').change();
 
 };
 var showSelect = function(data){
@@ -235,7 +237,7 @@ var showSelect = function(data){
         $('#select-what').append($(chks));
 
     });
-
+    $('#select-dataset-select').change();
     $('#save-data').attr('data-ops','select');
 
 };

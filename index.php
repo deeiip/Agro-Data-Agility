@@ -1,4 +1,9 @@
-
+<?php
+if(!isset($_COOKIE["username"]))
+{
+    header("Location: LogSign.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,6 +71,7 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
             <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" onclick="$('#conn-str').show('normal');"><i class="fa fa-database"></i> &nbsp;Use your Datasets</a></li>
                 <li><a href="logout.php"><i class="fa fa-sign-out"></i> &nbsp;Logout</a></li>
             </ul>
         </div>
@@ -127,6 +133,29 @@
     <!-- /#page-content-wrapper -->
 
 </div>
+
+<div id="conn-str" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button style="outline: none" type="button" onclick="$('#conn-str').hide('normal')" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">You data access credential </h4>
+            </div>
+            <div  class="modal-body">
+
+                <pre style="text-align: left">
+                    Host : <code>gourab.c0exnouewd5v.us-west-2.rds.amazonaws.com</code>
+                    Type : <code>MySQL</code>
+                    Database : <code>USDA</code>
+                    Username : <code><?php echo $_COOKIE["username"]; ?></code>
+                    Password : <code><?php echo $_COOKIE["password"] ?></code>
+                </pre>
+            </div>
+
+        </div>
+    </div>
+</div>
+
 <!-- /#wrapper -->
 <div id="dialog" class="modal">
     <div class="modal-dialog">

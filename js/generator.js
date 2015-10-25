@@ -175,13 +175,17 @@ $('#save-data').click(function(event){
         var selectStr = '';
         var name1Arr = names1.split(',');
         var name2Arr = names2.split(',');
+        var nmStr = '';
         for(var i = 0; i< name1Arr.length; i++)
         {
             selectStr+= data1_name.trim()+ '.' + name1Arr[i] +' as ' + data1_name.trim()+'_'+name1Arr[i] +' , ';
+            nmStr+= data1_name.trim()+'_'+name1Arr[i] +' , ';
         }
         for(var i =0 ; i < name2Arr.length; i++)
         {
             selectStr+= data2_name.trim()+ '.' + name2Arr[i] +' as ' + data2_name.trim() + '_' + name2Arr[i] +' , ';
+            nmStr+= data2_name.trim() + '_' + name2Arr[i] +' , ';
+
         }
         var fname = $('#resultset-name').val().trim();
         if(fname == null || fname == "")
@@ -190,10 +194,11 @@ $('#save-data').click(function(event){
             //name_markar++;
         }
         selectStr = selectStr.substring(0, selectStr.length -2);
+        nmStr = nmStr.substring(0, nmStr.length - 2);
         var qry = 'create view ' + fname +' as select ' + selectStr + ' from '+ $('#data1-select').val() + ' join '+ $('#data2-select').val() + ' on '+
             $('#data1-select').val() + '.' + $('#select-data1-col').val() + ' = ' +
             $('#data2-select').val() + '.' + $('#select-data2-col').val() + '';
-        createSet(qry, names1+','+names2, types1+','+types2, desc1+','+desc2 );
+        createSet(qry, nmStr, types1+','+types2, desc1+','+desc2 );
         //$('#dialog').hide('normal');
     }
     else if( $(this).attr('data-ops') == 'filter')
