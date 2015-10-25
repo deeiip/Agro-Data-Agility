@@ -1,4 +1,5 @@
 <?php
+require_once "config.php";
 if(!isset($_COOKIE["username"]))
 {
     header("Location: LogSign.php");
@@ -17,7 +18,7 @@ if(!isset($_COOKIE["username"]))
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Simple Sidebar - Start Bootstrap Template</title>
+    <title>Agro Data Agility</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -144,7 +145,7 @@ if(!isset($_COOKIE["username"]))
             <div  class="modal-body">
 
                 <pre style="text-align: left">
-                    Host : <code>gourab.c0exnouewd5v.us-west-2.rds.amazonaws.com</code>
+                    Host : <code><?php echo $host; ?></code>
                     Type : <code>MySQL</code>
                     Database : <code>USDA</code>
                     Username : <code><?php echo $_COOKIE["username"]; ?></code>
