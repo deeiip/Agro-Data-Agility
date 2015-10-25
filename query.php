@@ -2,8 +2,8 @@
 if(isset($_GET["table_name"]))
 {
     $host = "mysql:host=gourab.c0exnouewd5v.us-west-2.rds.amazonaws.com;dbname=USDA;";
-    $username = 'gourab';
-    $password = 'acdh3546';
+    $username = "gourab";
+    $password = "acdh3546";
     try {
         $pdo = new PDO($host, $username, $password);
         $q = "SELECT * FROM " . $_GET["table_name"] . " limit 10";

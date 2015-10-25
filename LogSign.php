@@ -87,7 +87,7 @@ if(isset($_GET["msgType"]) && !empty(trim($_GET["msgType"])) && isset($_GET["msg
         <input type="submit" class="btn btn-primary" value="Login &rightarrow;">
     </div>
 </form>
-<form class="container col-lg-12 pan2">
+<form class="container col-lg-12 pan2" action="signup.php" method="post">
     <h3>For New Users</h3><span class="glyphicon glyphicon-info-sign" style="margin-left: 98%; cursor: pointer;" onclick="$('.modal').show('normal');"></span>
     <div class="form-group" id="signup">
         <input type="text" class="form-control" placeholder="Invitation UUID, (If you have an Invitation)" name="inviUUID">

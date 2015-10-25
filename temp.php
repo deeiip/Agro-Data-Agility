@@ -8,7 +8,7 @@ class dataItem{
     public $name;
     public $cols;
 }
-if(isset($_COOKIE["username"]) && isset($_COOKIE["password"]))
+if(true)
 {
     $host = "mysql:host=gourab.c0exnouewd5v.us-west-2.rds.amazonaws.com;dbname=USDA;";
     $username = "gourab";
@@ -46,34 +46,30 @@ if(isset($_COOKIE["username"]) && isset($_COOKIE["password"]))
             "units",
             "footnotes"
         );
-        foreach($present as $itm)
-        {
-            array_push( $present, 'clean_'. $itm);
-        }
+
         for($i = 0; $i <= count($result) - 1; $i++)
         {
-            echo "<br>"  .'clean_'.$result[$i] . "<br>";
             if(in_array($result[$i], $present))
             {
-                continue;
-            }
-            $temp = new dataItem();
-            $temp->name = $result[$i];
-            $temp->cols = array();
+                $temp = new dataItem();
+                $temp->name = $result[$i];
+                $temp->cols = array();
 
-            $query = "EXPLAIN " . $result[$i];
-            $explanation = $pdo->query($query);
-            //echo $result[$i];
-            foreach($explanation->fetchAll() as $item)
-            {
-                $tempCol = new col();
-                $tempCol->name = $item["Field"];
-                $tempCol->type = $item["Type"];
-                $tempCol->description = "Sample desc";
-                array_push($temp->cols, $tempCol);
+                $query = "EXPLAIN " . $result[$i];
+                $explanation = $pdo->query($query);
+                //echo $result[$i];
+                foreach($explanation->fetchAll() as $item)
+                {
+                    $tempCol = new col();
+                    $tempCol->name = $item["Field"];
+                    $tempCol->type = $item["Type"];
+                    $tempCol->description = "Sample desc";
+                    array_push($temp->cols, $tempCol);
+                }
+
+                array_push($ret, $temp);
             }
 
-            array_push($ret, $temp);
         }
         print_r(json_encode($ret));
     }

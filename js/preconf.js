@@ -3,7 +3,10 @@
  */
 
 $.get('list.php', function(data){
-    if(data == "[][]")
+    try{
+        data = JSON.parse(data);
+    }
+    catch (ex)
     {
         $('#user-dataset-header').html('Custom Datasets: &nbsp; &nbsp; <span class="caret"></span>');
         return;

@@ -1,64 +1,35 @@
 <?php
-$userA = "root";
-$userB = "admin";
-$userC = "dipanjan";
-$passA = "0yit$32p";
-$passB = "awI==r$53";
-$passC = "acdh3546";
-$usr = $_POST["username"];
-$pass = $_POST["password"];
-if($usr == $userA)
-{
-    if($pass != $passA)
+$username = "gourab";
+$password = "acdh3546";
+$host = "mysql:host=gourab.c0exnouewd5v.us-west-2.rds.amazonaws.com;dbname=USDA_Members;";
+try {
+    $pdo = new PDO($host, $username, $password);
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+    $mysql_password = $password;
+    $password = hash("sha256", $password);
+    $q = "SELECT password FROM users WHERE username = '" . $username . "'";
+    $q_ret = $pdo->query($q);
+    if($q_ret->rowCount() == 0)
     {
-        header("Location: LogSign.php?msgType=danger&msg=Username+or+password+incorrect");
+        header("Location: msg=Username+does+not+exist.&msgType=warning");
     }
-    else
-    {
-        unset($_COOKIE["username"]);
-        setcookie("username", null, time()-3600);
-        setcookie("username", $userA);
-        unset($_COOKIE["password"]);
-        setcookie("passowrd", null, time()-3600);
-        setcookie("password", $passA);
-        header("Location: index.php");
-    }
-}
-elseif($usr == $userB)
-{
-    if($pass != $passB)
-    {
-        header("Location: LogSign.php?msgType=danger&msg=Username+or+password+incorrect");
-    }
-    else
+    if($q_ret->fetchColumn() == $password)
     {
         unset($_COOKIE["username"]);
         setcookie("username", null, time()-3600);
-        setcookie("username", $userB);
+        setcookie("username", $username);
         unset($_COOKIE["password"]);
-        setcookie("passowrd", null, time()-3600);
-        setcookie("password", $passB);
+        setcookie("password", null, time()-3600);
+        setcookie("password", $mysql_password);
         header("Location: index.php");
-    }
-}
-elseif($usr == $userC)
-{
-    if($pass != $passC)
-    {
-        header("Location: LogSign.php?msgType=danger&msg=Username+or+password+incorrect");
     }
     else
     {
-        unset($_COOKIE["username"]);
-        setcookie("username", null, time()-3600);
-        setcookie("username", $userC);
-        unset($_COOKIE["password"]);
-        setcookie("passowrd", null, time()-3600);
-        setcookie("password", $passC);
-        header("Location: index.php");
+        header("Location: LogSign.php?msg=Username+and+password+do+not+match&msgType=warning");
     }
 }
-else
+catch (Exception $ex)
 {
-    header("Location: LogSign.php?msgType=warning&msg=Username+does+not+exist.");
+    echo $ex->getMessage();
 }

@@ -3,757 +3,757 @@
     "name": "NASS",
     "dataset": [
       {
-        "name": "ASD",
-        "cols": [
+        "name":"ASD",
+        "cols":[
           {
-            "name": "uId",
-            "type": "int(11)",
-            "description": "Sample desc"
+            "name":"uId",
+            "type":"int(11)",
+            "description":"Sample desc"
           },
           {
-            "name": "Id",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"Id",
+            "type":"int(9) unsigned",
+            "description":"Sample desc"
           },
           {
-            "name": "Code",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"Code",
+            "type":"int(9) unsigned",
+            "description":"Sample desc"
           },
           {
-            "name": "Name",
-            "type": "text",
-            "description": "Sample desc"
+            "name":"Name",
+            "type":"text",
+            "description":"Sample desc"
           },
           {
-            "name": "StateId",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"StateId",
+            "type":"int(9) unsigned",
+            "description":"Sample desc"
           }
         ]
       },
       {
-        "name": "AggLevel",
-        "cols": [
+        "name":"AggLevel",
+        "cols":[
           {
-            "name": "Id",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"ID",
+            "type":"varchar(9)",
+            "description":"Sample desc"
           },
           {
-            "name": "Name",
-            "type": "text",
-            "description": "Sample desc"
+            "name":"Name",
+            "type":"text",
+            "description":"Sample desc"
           }
         ]
       },
       {
-        "name": "Class",
-        "cols": [
+        "name":"Class",
+        "cols":[
           {
-            "name": "uId",
-            "type": "int(11)",
-            "description": "Sample desc"
+            "name":"uId",
+            "type":"int(11)",
+            "description":"Sample desc"
           },
           {
-            "name": "Id",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"Id",
+            "type":"int(9) unsigned",
+            "description":"Sample desc"
           },
           {
-            "name": "Name",
-            "type": "text",
-            "description": "Sample desc"
+            "name":"Name",
+            "type":"text",
+            "description":"Sample desc"
           }
         ]
       },
       {
-        "name": "Commodity",
-        "cols": [
+        "name":"Commodity",
+        "cols":[
           {
-            "name": "uId",
-            "type": "int(11)",
-            "description": "Sample desc"
+            "name":"uId",
+            "type":"int(11)",
+            "description":"Sample desc"
           },
           {
-            "name": "Id",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"Id",
+            "type":"int(9) unsigned",
+            "description":"Sample desc"
           },
           {
-            "name": "Name",
-            "type": "text",
-            "description": "Sample desc"
+            "name":"Name",
+            "type":"text",
+            "description":"Sample desc"
           }
         ]
       },
       {
-        "name": "CommodityValue_t",
-        "cols": [
+        "name":"CommodityValue_t",
+        "cols":[
           {
-            "name": "u_id",
-            "type": "int(11)",
-            "description": "Sample desc"
+            "name":"u_id",
+            "type":"int(11)",
+            "description":"Sample desc"
           },
           {
-            "name": "ZIP_5",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"ZIP_5",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "CONGR_DISTRICT_CODE",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"CONGR_DISTRICT_CODE",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "LOCATION_DESC",
-            "type": "varchar(100)",
-            "description": "Sample desc"
+            "name":"LOCATION_DESC",
+            "type":"varchar(100)",
+            "description":"Sample desc"
           },
           {
-            "name": "YEAR",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"YEAR",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "BEGIN_CODE",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"BEGIN_CODE",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "END_CODE",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"END_CODE",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "REFERENCE_PERIOD_DESC",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"REFERENCE_PERIOD_DESC",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "WEEK_ENDING",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"WEEK_ENDING",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "LOAD_TIME",
-            "type": "varchar(100)",
-            "description": "Sample desc"
+            "name":"LOAD_TIME",
+            "type":"varchar(100)",
+            "description":"Sample desc"
           },
           {
-            "name": "VALUE",
-            "type": "varchar(100)",
-            "description": "Sample desc"
+            "name":"VALUE",
+            "type":"varchar(100)",
+            "description":"Sample desc"
           },
           {
-            "name": "CV_",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"CV_",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "SourceId",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"SourceId",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "SectorId",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"SectorId",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "GroupId",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"GroupId",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "CommodityId",
-            "type": "varchar(20)",
-            "description": "Sample desc"
+            "name":"CommodityId",
+            "type":"varchar(20)",
+            "description":"Sample desc"
           },
           {
-            "name": "ClassId",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"ClassId",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "ProdnPracticeId",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"ProdnPracticeId",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "UtilPracticeId",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"UtilPracticeId",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "StatisticcatId",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"StatisticcatId",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "UnitId",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"UnitId",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "DomainId",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"DomainId",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "AggLevelId",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"AggLevelId",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "RegionId",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"RegionId",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "FrequencyId",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"FrequencyId",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "ID",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"ID",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "StateId",
-            "type": "varchar(100)",
-            "description": "Sample desc"
+            "name":"StateId",
+            "type":"varchar(100)",
+            "description":"Sample desc"
           },
           {
-            "name": "DomainCatId",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"DomainCatId",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "CountyId",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"CountyId",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "WatershedId",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"WatershedId",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "CountryId",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"CountryId",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "AsdId",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"AsdId",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "CValue",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"CValue",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "VALUE_NUM",
-            "type": "varchar(100)",
-            "description": "Sample desc"
+            "name":"VALUE_NUM",
+            "type":"varchar(100)",
+            "description":"Sample desc"
           },
           {
-            "name": "CV_NUM",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"CV_NUM",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "YEAR_NUM",
-            "type": "varchar(100)",
-            "description": "Sample desc"
+            "name":"YEAR_NUM",
+            "type":"varchar(100)",
+            "description":"Sample desc"
           }
         ]
       },
       {
-        "name": "Country",
-        "cols": [
+        "name":"Country",
+        "cols":[
           {
-            "name": "uId",
-            "type": "int(11)",
-            "description": "Sample desc"
+            "name":"uId",
+            "type":"int(11)",
+            "description":"Sample desc"
           },
           {
-            "name": "Id",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"Id",
+            "type":"int(9) unsigned",
+            "description":"Sample desc"
           },
           {
-            "name": "Code",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"Code",
+            "type":"int(9) unsigned",
+            "description":"Sample desc"
           },
           {
-            "name": "Name",
-            "type": "text",
-            "description": "Sample desc"
+            "name":"Name",
+            "type":"text",
+            "description":"Sample desc"
           }
         ]
       },
       {
-        "name": "County",
-        "cols": [
+        "name":"County",
+        "cols":[
           {
-            "name": "uId",
-            "type": "int(11)",
-            "description": "Sample desc"
+            "name":"uId",
+            "type":"int(11)",
+            "description":"Sample desc"
           },
           {
-            "name": "Id",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"Id",
+            "type":"int(9) unsigned",
+            "description":"Sample desc"
           },
           {
-            "name": "Ansi",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"Ansi",
+            "type":"varchar(9)",
+            "description":"Sample desc"
           },
           {
-            "name": "Code",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"Code",
+            "type":"int(9) unsigned",
+            "description":"Sample desc"
           },
           {
-            "name": "Name",
-            "type": "text",
-            "description": "Sample desc"
+            "name":"Name",
+            "type":"text",
+            "description":"Sample desc"
           },
           {
-            "name": "AsdId",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"AsdId",
+            "type":"int(9) unsigned",
+            "description":"Sample desc"
           },
           {
-            "name": "StateId",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"StateId",
+            "type":"int(9) unsigned",
+            "description":"Sample desc"
           }
         ]
       },
       {
-        "name": "Domain",
-        "cols": [
+        "name":"Domain",
+        "cols":[
           {
-            "name": "uId",
-            "type": "int(11)",
-            "description": "Sample desc"
+            "name":"uId",
+            "type":"int(11)",
+            "description":"Sample desc"
           },
           {
-            "name": "Id",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"Id",
+            "type":"varchar(9)",
+            "description":"Sample desc"
           },
           {
-            "name": "Name",
-            "type": "text",
-            "description": "Sample desc"
+            "name":"Name",
+            "type":"text",
+            "description":"Sample desc"
           }
         ]
       },
       {
-        "name": "DomainCat",
-        "cols": [
+        "name":"DomainCat",
+        "cols":[
           {
-            "name": "uId",
-            "type": "int(11)",
-            "description": "Sample desc"
+            "name":"uId",
+            "type":"int(11)",
+            "description":"Sample desc"
           },
           {
-            "name": "Id",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"Id",
+            "type":"int(9) unsigned",
+            "description":"Sample desc"
           },
           {
-            "name": "Name",
-            "type": "text",
-            "description": "Sample desc"
+            "name":"Name",
+            "type":"text",
+            "description":"Sample desc"
           },
           {
-            "name": "DomainId",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"DomainId",
+            "type":"int(9) unsigned",
+            "description":"Sample desc"
           }
         ]
       },
       {
-        "name": "Frequency",
-        "cols": [
+        "name":"Frequency",
+        "cols":[
           {
-            "name": "uId",
-            "type": "int(11)",
-            "description": "Sample desc"
+            "name":"uId",
+            "type":"int(11)",
+            "description":"Sample desc"
           },
           {
-            "name": "Id",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"Id",
+            "type":"int(9) unsigned",
+            "description":"Sample desc"
           },
           {
-            "name": "Name",
-            "type": "text",
-            "description": "Sample desc"
+            "name":"Name",
+            "type":"text",
+            "description":"Sample desc"
           }
         ]
       },
       {
-        "name": "ProdnPractice",
-        "cols": [
+        "name":"ProdnPractice",
+        "cols":[
           {
-            "name": "uId",
-            "type": "int(11)",
-            "description": "Sample desc"
+            "name":"uId",
+            "type":"int(11)",
+            "description":"Sample desc"
           },
           {
-            "name": "Id",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"Id",
+            "type":"int(9) unsigned",
+            "description":"Sample desc"
           },
           {
-            "name": "Name",
-            "type": "text",
-            "description": "Sample desc"
+            "name":"Name",
+            "type":"text",
+            "description":"Sample desc"
           }
         ]
       },
       {
-        "name": "Region",
-        "cols": [
+        "name":"Region",
+        "cols":[
           {
-            "name": "uId",
-            "type": "int(11)",
-            "description": "Sample desc"
+            "name":"uId",
+            "type":"int(11)",
+            "description":"Sample desc"
           },
           {
-            "name": "Id",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"Id",
+            "type":"int(9) unsigned",
+            "description":"Sample desc"
           },
           {
-            "name": "Name",
-            "type": "text",
-            "description": "Sample desc"
+            "name":"Name",
+            "type":"text",
+            "description":"Sample desc"
           }
         ]
       },
       {
-        "name": "Sector",
-        "cols": [
+        "name":"Sector",
+        "cols":[
           {
-            "name": "uId",
-            "type": "int(11)",
-            "description": "Sample desc"
+            "name":"uId",
+            "type":"int(11)",
+            "description":"Sample desc"
           },
           {
-            "name": "Id",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"Id",
+            "type":"int(9) unsigned",
+            "description":"Sample desc"
           },
           {
-            "name": "Name",
-            "type": "text",
-            "description": "Sample desc"
+            "name":"Name",
+            "type":"text",
+            "description":"Sample desc"
           }
         ]
       },
       {
-        "name": "Source",
-        "cols": [
+        "name":"Source",
+        "cols":[
           {
-            "name": "uId",
-            "type": "int(11)",
-            "description": "Sample desc"
+            "name":"uId",
+            "type":"int(11)",
+            "description":"Sample desc"
           },
           {
-            "name": "Id",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"Id",
+            "type":"int(9) unsigned",
+            "description":"Sample desc"
           },
           {
-            "name": "Name",
-            "type": "text",
-            "description": "Sample desc"
+            "name":"Name",
+            "type":"text",
+            "description":"Sample desc"
           }
         ]
       },
       {
-        "name": "State",
-        "cols": [
+        "name":"State",
+        "cols":[
           {
-            "name": "uId",
-            "type": "int(11)",
-            "description": "Sample desc"
+            "name":"uId",
+            "type":"int(11)",
+            "description":"Sample desc"
           },
           {
-            "name": "Id",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"Id",
+            "type":"int(9) unsigned",
+            "description":"Sample desc"
           },
           {
-            "name": "AnsiCode",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"AnsiCode",
+            "type":"varchar(9)",
+            "description":"Sample desc"
           },
           {
-            "name": "Alpha",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"Alpha",
+            "type":"varchar(9)",
+            "description":"Sample desc"
           },
           {
-            "name": "FipsCode",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"FipsCode",
+            "type":"int(9) unsigned",
+            "description":"Sample desc"
           },
           {
-            "name": "Name",
-            "type": "text",
-            "description": "Sample desc"
+            "name":"Name",
+            "type":"text",
+            "description":"Sample desc"
           }
         ]
       },
       {
-        "name": "Statisticcat",
-        "cols": [
+        "name":"Statisticcat",
+        "cols":[
           {
-            "name": "uId",
-            "type": "int(11)",
-            "description": "Sample desc"
+            "name":"uId",
+            "type":"int(11)",
+            "description":"Sample desc"
           },
           {
-            "name": "Id",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"Id",
+            "type":"int(9) unsigned",
+            "description":"Sample desc"
           },
           {
-            "name": "Name",
-            "type": "text",
-            "description": "Sample desc"
+            "name":"Name",
+            "type":"text",
+            "description":"Sample desc"
           }
         ]
       },
       {
-        "name": "Unit",
-        "cols": [
+        "name":"Unit",
+        "cols":[
           {
-            "name": "uId",
-            "type": "int(11)",
-            "description": "Sample desc"
+            "name":"uId",
+            "type":"int(11)",
+            "description":"Sample desc"
           },
           {
-            "name": "Id",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"Id",
+            "type":"int(9) unsigned",
+            "description":"Sample desc"
           },
           {
-            "name": "Name",
-            "type": "text",
-            "description": "Sample desc"
+            "name":"Name",
+            "type":"text",
+            "description":"Sample desc"
           }
         ]
       },
       {
-        "name": "UnitPractice",
-        "cols": [
+        "name":"UnitPractice",
+        "cols":[
           {
-            "name": "uId",
-            "type": "int(11)",
-            "description": "Sample desc"
+            "name":"uId",
+            "type":"int(11)",
+            "description":"Sample desc"
           },
           {
-            "name": "Id",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"Id",
+            "type":"int(9) unsigned",
+            "description":"Sample desc"
           },
           {
-            "name": "Name",
-            "type": "text",
-            "description": "Sample desc"
+            "name":"Name",
+            "type":"text",
+            "description":"Sample desc"
           }
         ]
       },
       {
-        "name": "Watershed",
-        "cols": [
+        "name":"Watershed",
+        "cols":[
           {
-            "name": "uId",
-            "type": "int(11)",
-            "description": "Sample desc"
+            "name":"uId",
+            "type":"int(11)",
+            "description":"Sample desc"
           },
           {
-            "name": "Id",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"Id",
+            "type":"int(9) unsigned",
+            "description":"Sample desc"
           },
           {
-            "name": "Code",
-            "type": "varchar(100)",
-            "description": "Sample desc"
+            "name":"Code",
+            "type":"bigint(21) unsigned",
+            "description":"Sample desc"
           },
           {
-            "name": "Name",
-            "type": "text",
-            "description": "Sample desc"
+            "name":"Name",
+            "type":"text",
+            "description":"Sample desc"
           }
         ]
       },
       {
-        "name": "clean_series_element",
-        "cols": [
+        "name":"nass_Group",
+        "cols":[
           {
-            "name": "id",
-            "type": "int(11)",
-            "description": "Sample desc"
+            "name":"uId",
+            "type":"int(11)",
+            "description":"Sample desc"
           },
           {
-            "name": "series_abb",
-            "type": "varchar(99)",
-            "description": "Sample desc"
+            "name":"Id",
+            "type":"int(9) unsigned",
+            "description":"Sample desc"
           },
           {
-            "name": "series_element",
-            "type": "int(9) unsigned",
-            "description": "Sample desc"
-          },
-          {
-            "name": "element_name",
-            "type": "varchar(199)",
-            "description": "Sample desc"
-          },
-          {
-            "name": "invalid",
-            "type": "int(1)",
-            "description": "Sample desc"
+            "name":"Name",
+            "type":"text",
+            "description":"Sample desc"
           }
         ]
       },
       {
-        "name": "nass_Group",
-        "cols": [
+        "name":"series_element",
+        "cols":[
           {
-            "name": "uId",
-            "type": "int(11)",
-            "description": "Sample desc"
+            "name":"id",
+            "type":"int(11)",
+            "description":"Sample desc"
           },
           {
-            "name": "Id",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"series_abb",
+            "type":"varchar(99)",
+            "description":"Sample desc"
           },
           {
-            "name": "Name",
-            "type": "text",
-            "description": "Sample desc"
+            "name":"series_element",
+            "type":"int(9) unsigned",
+            "description":"Sample desc"
+          },
+          {
+            "name":"element_name",
+            "type":"varchar(199)",
+            "description":"Sample desc"
+          },
+          {
+            "name":"invalid",
+            "type":"int(1)",
+            "description":"Sample desc"
           }
         ]
       },
       {
-        "name": "surveyData_t",
-        "cols": [
+        "name":"surveyData_t",
+        "cols":[
           {
-            "name": "Id",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"Id",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "survey_abb",
-            "type": "varchar(100)",
-            "description": "Sample desc"
+            "name":"survey_abb",
+            "type":"varchar(100)",
+            "description":"Sample desc"
           },
           {
-            "name": "report_num",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"report_num",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "topic_abb",
-            "type": "varchar(100)",
-            "description": "Sample desc"
+            "name":"topic_abb",
+            "type":"varchar(100)",
+            "description":"Sample desc"
           },
           {
-            "name": "stat_year",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"stat_year",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "flips_st",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"flips_st",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "subject_num",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"subject_num",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "series",
-            "type": "varchar(100)",
-            "description": "Sample desc"
+            "name":"series",
+            "type":"varchar(100)",
+            "description":"Sample desc"
           },
           {
-            "name": "series_element",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"series_element",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "series2",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"series2",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "series2_element",
-            "type": "varchar(100)",
-            "description": "Sample desc"
+            "name":"series2_element",
+            "type":"varchar(100)",
+            "description":"Sample desc"
           },
           {
-            "name": "estimate",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"estimate",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "rse",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"rse",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "unreliable_est",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"unreliable_est",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           },
           {
-            "name": "dec_disp",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"dec_disp",
+            "type":"varchar(10)",
+            "description":"Sample desc"
           }
         ]
       },
       {
-        "name": "temptable",
-        "cols": [
+        "name":"temptable",
+        "cols":[
           {
-            "name": "uId",
-            "type": "int(11)",
-            "description": "Sample desc"
+            "name":"uId",
+            "type":"int(11)",
+            "description":"Sample desc"
           },
           {
-            "name": "Id",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"Id",
+            "type":"int(9) unsigned",
+            "description":"Sample desc"
           },
           {
-            "name": "countyid",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"countyid",
+            "type":"varchar(9)",
+            "description":"Sample desc"
           },
           {
-            "name": "commodityid",
-            "type": "varchar(10)",
-            "description": "Sample desc"
+            "name":"commodityid",
+            "type":"varchar(9)",
+            "description":"Sample desc"
           }
         ]
       }
@@ -761,269 +761,299 @@
   },
   {
     "name": "ARMS",
-    "dataset":[
+    "dataset": [
       {
-        "name": "reports",
-        "cols": [
+        "name":"footnotes",
+        "cols":[
           {
-            "name": "survey_abb",
-            "type": "string",
-            "description": "col 1 data sets"
+            "name":"id",
+            "type":"int(11)",
+            "description":"Sample desc"
           },
           {
-            "name": "report_num",
-            "type": "string",
-            "description": "col 2 data sets"
+            "name":"survey_abb",
+            "type":"varchar(99)",
+            "description":"Sample desc"
           },
           {
-            "name": "report_header",
-            "type": "string",
-            "description": "col 2 data sets"
+            "name":"report_num",
+            "type":"varchar(9)",
+            "description":"Sample desc"
+          },
+          {
+            "name":"topic_abb",
+            "type":"varchar(99)",
+            "description":"Sample desc"
+          },
+          {
+            "name":"footnote_text",
+            "type":"text",
+            "description":"Sample desc"
           }
         ]
       },
       {
-        "name": "series_elements",
-        "cols": [
+        "name":"reports",
+        "cols":[
           {
-            "name": "series_abb",
-            "type": "string",
-            "description": "col 1 data sets"
+            "name":"id",
+            "type":"int(11)",
+            "description":"Sample desc"
           },
           {
-            "name": "series_element",
-            "type": "string",
-            "description": "col 2 data sets"
+            "name":"survey_abb",
+            "type":"varchar(99)",
+            "description":"Sample desc"
           },
           {
-            "name": "element_name",
-            "type": "string",
-            "description": "col 2 data sets"
+            "name":"report_num",
+            "type":"varchar(9)",
+            "description":"Sample desc"
           },
           {
-            "name": "invalid",
-            "type": "string",
-            "description": "col 2 data sets"
+            "name":"report_header",
+            "type":"text",
+            "description":"Sample desc"
           }
         ]
       },
       {
-        "name": "series",
-        "cols": [
+        "name":"series",
+        "cols":[
           {
-            "name": "series_abb",
-            "type": "string",
-            "description": "col 1 data sets"
+            "name":"series_id",
+            "type":"int(11)",
+            "description":"Sample desc"
           },
           {
-            "name": "series_header",
-            "type": "string",
-            "description": "col 2 data sets"
+            "name":"series_abb",
+            "type":"varchar(99)",
+            "description":"Sample desc"
           },
           {
-            "name": "series_seq",
-            "type": "string",
-            "description": "col 2 data sets"
+            "name":"series_header",
+            "type":"varchar(199)",
+            "description":"Sample desc"
+          },
+          {
+            "name":"series_seq",
+            "type":"int(9) unsigned",
+            "description":"Sample desc"
           }
         ]
       },
       {
-        "name": "series_xtab",
-        "cols": [
+        "name":"series_xtab",
+        "cols":[
           {
-            "name": "survey_abb",
-            "type": "varchar(100)",
-            "description": "col 1 data sets"
+            "name":"id",
+            "type":"int(11)",
+            "description":"Sample desc"
           },
           {
-            "name": "series",
-            "type": "varchar(100)",
-            "description": "col 2 data sets"
+            "name":"survey_abb",
+            "type":"varchar(99)",
+            "description":"Sample desc"
           },
           {
-            "name": "series2",
-            "type": "varchar(100)",
-            "description": "col 2 data sets"
+            "name":"series",
+            "type":"varchar(99)",
+            "description":"Sample desc"
+          },
+          {
+            "name":"series2",
+            "type":"varchar(99)",
+            "description":"Sample desc"
+          },
+          {
+            "name":"flip",
+            "type":"int(1)",
+            "description":"Sample desc"
           }
         ]
       },
       {
-        "name": "state",
-        "cols": [
+        "name":"state",
+        "cols":[
           {
-            "name": "FipsCode",
-            "type": "varchar(10)",
-            "description": "col 1 data sets"
+            "name":"id",
+            "type":"int(11)",
+            "description":"Sample desc"
           },
           {
-            "name": "Name",
-            "type": "varchar(100)",
-            "description": "col 2 data sets"
+            "name":"fipscode",
+            "type":"int(9) unsigned",
+            "description":"Sample desc"
+          },
+          {
+            "name":"name",
+            "type":"varchar(99)",
+            "description":"Sample desc"
           }
         ]
       },
       {
-        "name": "subjects",
-        "cols": [
+        "name":"subjects",
+        "cols":[
           {
-            "name": "survey_abb",
-            "type": "varchar(100)",
-            "description": "col 1 data sets"
+            "name":"id",
+            "type":"int(11)",
+            "description":"Sample desc"
           },
           {
-            "name": "subject_num",
-            "type": "varchar(10)",
-            "description": "col 2 data sets"
+            "name":"survey_abb",
+            "type":"varchar(99)",
+            "description":"Sample desc"
           },
           {
-            "name": "subject",
-            "type": "varchar(100)",
-            "description": "col 2 data sets"
+            "name":"subject_num",
+            "type":"int(9) unsigned",
+            "description":"Sample desc"
           },
           {
-            "name": "inValid",
-            "type": "varchar(10)",
-            "description": "col 2 data sets"
+            "name":"subject",
+            "type":"varchar(99)",
+            "description":"Sample desc"
+          },
+          {
+            "name":"invalid",
+            "type":"int(1)",
+            "description":"Sample desc"
           }
         ]
       },
       {
-        "name": "surveys",
-        "cols": [
+        "name":"surveys",
+        "cols":[
           {
-            "name": "survey_abb",
-            "type": "varchar(100)",
-            "description": "col 1 data sets"
+            "name":"id",
+            "type":"int(11)",
+            "description":"Sample desc"
           },
           {
-            "name": "survey_header",
-            "type": "text",
-            "description": "col 2 data sets"
+            "name":"survey_abb",
+            "type":"varchar(99)",
+            "description":"Sample desc"
+          },
+          {
+            "name":"survey_header",
+            "type":"text",
+            "description":"Sample desc"
           }
         ]
       },
       {
-        "name": "topics",
-        "cols": [
+        "name":"topic_groups",
+        "cols":[
           {
-            "name": "survey_abb",
-            "type": "varchar(100)",
-            "description": "col 1 data sets"
+            "name":"id",
+            "type":"int(11)",
+            "description":"Sample desc"
           },
           {
-            "name": "report_num",
-            "type": "varchar(10)",
-            "description": "col 2 data sets"
+            "name":"survey_abb",
+            "type":"varchar(99)",
+            "description":"Sample desc"
           },
           {
-            "name": "topic_abb",
-            "type": "varchar(20)",
-            "description": "col 1 data sets"
+            "name":"report_num",
+            "type":"varchar(9)",
+            "description":"Sample desc"
           },
           {
-            "name": "topic_seq",
-            "type": "varchar(10)",
-            "description": "col 2 data sets"
+            "name":"topic_group",
+            "type":"varchar(9)",
+            "description":"Sample desc"
           },
           {
-            "name": "topic_header",
-            "type": "text",
-            "description": "col 1 data sets"
-          },
-          {
-            "name": "unit_num",
-            "type": "varchar(10)",
-            "description": "col 2 data sets"
-          },
-          {
-            "name": "old_seq",
-            "type": "varchar(10)",
-            "description": "col 1 data sets"
-          },
-          {
-            "name": "topic_level",
-            "type": "varchar(10)",
-            "description": "col 2 data sets"
-          },
-          {
-            "name": "invalid",
-            "type": "varchar(10)",
-            "description": "col 1 data sets"
-          },
-          {
-            "name": "topic_group",
-            "type": "text",
-            "description": "col 2 data sets"
-          },
-          {
-            "name": "topic_desc",
-            "type": "text",
-            "description": "col 1 data sets"
+            "name":"group_header",
+            "type":"text",
+            "description":"Sample desc"
           }
         ]
       },
       {
-        "name": "topic_groups",
-        "cols": [
+        "name":"topics",
+        "cols":[
           {
-            "name": "survey_abb",
-            "type": "varchar(100)",
-            "description": "col 1 data sets"
+            "name":"id",
+            "type":"int(11)",
+            "description":"Sample desc"
           },
           {
-            "name": "report_num",
-            "type": "varchar(100)",
-            "description": "col 2 data sets"
+            "name":"survey_abb",
+            "type":"varchar(99)",
+            "description":"Sample desc"
           },
           {
-            "name": "topic_group",
-            "type": "varchar(100)",
-            "description": "col 2 data sets"
+            "name":"report_num",
+            "type":"int(9) unsigned",
+            "description":"Sample desc"
           },
           {
-            "name": "group_header",
-            "type": "text",
-            "description": "col 2 data sets"
+            "name":"topic_abb",
+            "type":"varchar(19)",
+            "description":"Sample desc"
+          },
+          {
+            "name":"topic_seq",
+            "type":"varchar(9)",
+            "description":"Sample desc"
+          },
+          {
+            "name":"topic_header",
+            "type":"text",
+            "description":"Sample desc"
+          },
+          {
+            "name":"unit_num",
+            "type":"varchar(9)",
+            "description":"Sample desc"
+          },
+          {
+            "name":"old_seq",
+            "type":"varchar(9)",
+            "description":"Sample desc"
+          },
+          {
+            "name":"topic_level",
+            "type":"varchar(9)",
+            "description":"Sample desc"
+          },
+          {
+            "name":"invalid",
+            "type":"int(1)",
+            "description":"Sample desc"
+          },
+          {
+            "name":"topic_group",
+            "type":"text",
+            "description":"Sample desc"
+          },
+          {
+            "name":"topic_desc",
+            "type":"text",
+            "description":"Sample desc"
           }
         ]
       },
       {
-        "name": "units",
-        "cols": [
+        "name":"units",
+        "cols":[
           {
-            "name": "unit_num",
-            "type": "varchar(10)",
-            "description": "col 1 data sets"
+            "name":"id",
+            "type":"int(11)",
+            "description":"Sample desc"
           },
           {
-            "name": "unit_desc",
-            "type": "text",
-            "description": "col 2 data sets"
-          }
-        ]
-      },
-      {
-        "name": "footnotes",
-        "cols": [
-          {
-            "name": "survey_abb",
-            "type": "varchar(100)",
-            "description": "col 1 data sets"
+            "name":"unit_num",
+            "type":"varchar(9)",
+            "description":"Sample desc"
           },
           {
-            "name": "report_num",
-            "type": "varchar(10)",
-            "description": "col 2 data sets"
-          },
-          {
-            "name": "topic_abb",
-            "type": "varchar(100)",
-            "description": "col 1 data sets"
-          },
-          {
-            "name": "footnote_text",
-            "type": "text",
-            "description": "col 2 data sets"
+            "name":"unit_desc",
+            "type":"text",
+            "description":"Sample desc"
           }
         ]
       }

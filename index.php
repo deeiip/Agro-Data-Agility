@@ -1,9 +1,4 @@
-<?php
-if(!isset($_COOKIE["username"]))
-{
-    header("Location: LogSign.php");
-}
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 

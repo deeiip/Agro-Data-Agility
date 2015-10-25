@@ -11,7 +11,7 @@ if(isset($_COOKIE["username"]) && isset($_COOKIE["password"]))
 {
     $host = "mysql:host=gourab.c0exnouewd5v.us-west-2.rds.amazonaws.com;dbname=USDA;";
     $username = $_COOKIE["username"];
-    $password = "";
+    $password = $_COOKIE["password"];
     try {
         $pdo = new PDO($host, $username, $password);
         $q = "SHOW TABLES";
